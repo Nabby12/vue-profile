@@ -40,7 +40,7 @@ jobs:
           # command: SAMPLE_ENV=$SAMPLE_ENV npm run build
       - aws-s3/sync:
           from: dist
-          to: s3://$BUCKET_NAME/
+          to: s3://$AWS_BUCKT_NAME/
           overwrite: true
 
 workflows:
