@@ -4,7 +4,7 @@ orbs:
   aws-s3: circleci/aws-s3@1.0.15
 
 executors:
-  default:
+  my-executor:
     docker:
       - image: circleci/node:12
 
@@ -21,7 +21,7 @@ commands:
 
 jobs:
   build:
-    executor: default
+    executor: my-executor
     working_directory: ~/workdir
     steps:
       - checkout
@@ -29,7 +29,7 @@ jobs:
       - run: npm run test
 
   deploy:
-    executor: default
+    executor: my-executor
     working_directory: ~/workdir
     steps:
       - checkout
