@@ -7,7 +7,6 @@ executors:
   default:
     docker:
       - image: circleci/node:12
-      - image: circleci/python:2.7
 
 commands:
   npm_install:
